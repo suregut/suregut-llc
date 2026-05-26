@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Your Account - SureGut</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        h1 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        p, li {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .warning {
+            background-color: #fef2f2;
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            color: #991b1b;
+        }
+        form {
+            margin-top: 24px;
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 24px;
+        }
+        label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 6px;
+        }
+        input[type="email"], textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 12px 14px;
+            border: 1.5px solid #cbd5e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            margin-bottom: 18px;
+            color: #333;
+        }
+        textarea { min-height: 90px; resize: vertical; }
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .checkbox-row input { margin-top: 4px; }
+        .checkbox-row label { font-weight: 400; color: #4a5568; margin: 0; }
+        button {
+            background-color: #dc2626;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        button:hover:not(:disabled) { background-color: #b91c1c; }
+        #status {
+            margin-top: 18px;
+            padding: 14px;
+            border-radius: 8px;
+            display: none;
+        }
+        #status.success { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; display: block; }
+        #status.error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; display: block; }
+    </style>
+</head>
+<body>
+    <nav style="margin-bottom: 30px; padding-bottom: 15px; border-bottom: 1px solid #eee;">
+        <a href="https://www.suregut.com" style="text-decoration: none; color: #3498db; font-weight: bold;">
+            &larr; Back to SureGut Home
+        </a>
+    </nav>
+
+    <h1>Delete Your SureGut Account</h1>
+
+    <p>You can permanently delete your SureGut account and all associated data. The fastest way is from inside the app:</p>
+
+    <div class="highlight">
+        <strong>In the app:</strong> Open SureGut &rarr; <strong>Profile</strong> tab &rarr; <strong>Settings</strong> &rarr; <strong>Delete Account</strong>. Your account and data are removed immediately.
+    </div>
+
+    <p>If you no longer have the app installed, you can request deletion below.</p>
+
+    <h2>What gets deleted</h2>
+    <ul>
+        <li>Your account and sign-in association (Apple / Google).</li>
+        <li>Your dietary profiles and saved conditions.</li>
+        <li>Your scan history.</li>
+        <li>Your daily scan-allowance records and any ad-attribution records.</li>
+    </ul>
+
+    <div class="warning">
+        <strong>This cannot be undone.</strong> Active subscriptions are billed by Apple or Google and are not cancelled by deleting your account &mdash; please cancel any subscription separately in the App Store or Play Store. Some records may be retained briefly in encrypted backups or where required by law (e.g., transaction records) before being permanently erased.
+    </div>
+
+    <h2>Request Account Deletion</h2>
+    <p>To verify your request, please provide <strong>both</strong> your SureGut User ID and the email address associated with your account (from your Apple or Google sign-in). We will verify your request and delete your data within 30 days.</p>
+
+    <div class="highlight">
+        <strong>Where do I find my User ID?</strong> Open SureGut &rarr; <strong>Profile</strong> tab. Your User ID is shown near the top of the screen (it starts with <code>auth_</code>) and can be tapped to copy.
+    </div>
+
+    <form id="delete-form">
+        <label for="userId">SureGut User ID</label>
+        <input type="text" id="userId" name="userId" required placeholder="auth_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" autocomplete="off" autocapitalize="none" spellcheck="false">
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+
+        <label for="reason">Reason (optional)</label>
+        <textarea id="reason" name="reason" placeholder="Help us improve &mdash; why are you leaving?"></textarea>
+
+        <div class="checkbox-row">
+            <input type="checkbox" id="confirm" required>
+            <label for="confirm">I understand this will permanently delete my SureGut account and all associated data, and that this cannot be undone.</label>
+        </div>
+
+        <button type="submit" id="submit-btn">Request Account Deletion</button>
+        <div id="status"></div>
+    </form>
+
+    <h2>Prefer email?</h2>
+    <p>You can also email us at <a href="mailto:support@suregut.com?subject=Account%20Deletion%20Request">support@suregut.com</a> with the subject "Account Deletion Request" and we will process it within 30 days.</p>
+
+    <script>
+        var ENDPOINT = "https://iws0r9y7vk.execute-api.us-east-1.amazonaws.com/prod/api/account/delete-request";
+        var form = document.getElementById("delete-form");
+        var statusEl = document.getElementById("status");
+        var btn = document.getElementById("submit-btn");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            statusEl.className = "";
+            statusEl.style.display = "none";
+
+            var userId = document.getElementById("userId").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var reason = document.getElementById("reason").value.trim();
+
+            btn.disabled = true;
+            btn.textContent = "Submitting...";
+
+            fetch(ENDPOINT, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ userId: userId, email: email, reason: reason })
+            })
+            .then(function (res) {
+                if (!res.ok) throw new Error("Request failed");
+                return res.json();
+            })
+            .then(function () {
+                statusEl.className = "success";
+                statusEl.textContent = "Thank you. We've received your request. If an account exists for this email, it will be deleted within 30 days. Please check your inbox for a confirmation email.";
+                form.reset();
+            })
+            .catch(function () {
+                statusEl.className = "error";
+                statusEl.textContent = "Something went wrong. Please try again, or email support@suregut.com.";
+            })
+            .finally(function () {
+                btn.disabled = false;
+                btn.textContent = "Request Account Deletion";
+            });
+        });
+    </script>
+</body>
+</html>
