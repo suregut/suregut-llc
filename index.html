@@ -4,82 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SureGut LLC | Innovative Software Solutions</title>
-    <style>
-        :root { --primary: #0f172a; --accent: #0d9488; --text: #334155; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text); margin: 0; padding: 0; }
-        header { background: var(--primary); color: white; padding: 60px 20px; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
-        .tagline { font-size: 1.2rem; opacity: 0.9; margin-top: 10px; }
-        .section { margin-bottom: 40px; }
-        .card { border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; background: #f8fafc; }
-        .badge { background: var(--accent); color: white; padding: 4px 12px; border-radius: 99px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
-        footer { background: #f1f5f9; padding: 40px 20px; border-top: 1px solid #e2e8f0; font-size: 0.9rem; }
-        .contact-info { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        a { color: var(--accent); text-decoration: none; }
-        .store-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; align-items: center; }
-        .store-badges a { display: inline-block; transition: opacity 0.2s; }
-        .store-badges a:hover { opacity: 0.8; }
-        .store-badges img { height: 50px; width: auto; display: block; }
-        @media (max-width: 600px) { .contact-info { grid-template-columns: 1fr; } }
-    </style>
+    <meta name="description" content="SureGut LLC is a California-based software firm building utility-driven mobile apps and data-centric solutions, including the SureGut food-label scanner.">
+    <meta name="theme-color" content="#0f172a">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="SureGut LLC | Innovative Software Solutions">
+    <meta property="og:description" content="Engineering intelligent solutions for a digital world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.suregut.com">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>SureGut LLC</h1>
-    <p class="tagline">Engineering Intelligent Solutions for a Digital World</p>
-</header>
-<div class="container">
-    <div class="section">
-        <h2>About Us</h2>
-        <p>SureGut LLC is a California-based software development firm specializing in utility-driven mobile applications and data-centric software solutions. Our mission is to transform complex data into actionable insights for users across various industries, including health-tech and financial services.</p>
+<!-- Animated gradient backdrop -->
+<div class="bg-aurora" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+</div>
+
+<!-- Navigation -->
+<nav class="nav" id="nav">
+    <a href="#top" class="nav-brand">
+        <span class="nav-logo">SG</span>
+        <span>SureGut<span class="nav-llc">&nbsp;LLC</span></span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="app.html">App</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="nav-cta">Contact</a>
     </div>
-    <div class="section">
-        <h2>Featured Product</h2>
-        <div class="card">
+</nav>
+
+<header class="hero" id="top">
+    <div class="hero-inner">
+        <span class="pill reveal" data-reveal>California-based software studio</span>
+        <h1 class="hero-title reveal" data-reveal>
+            Engineering <span class="grad-text">intelligent solutions</span><br>
+            for a digital world.
+        </h1>
+        <p class="hero-sub reveal" data-reveal>
+            SureGut LLC builds utility-driven mobile applications and data-centric
+            software that turn complex data into clear, actionable insight.
+        </p>
+        <div class="hero-actions reveal" data-reveal>
+            <a href="app.html" class="btn btn-primary">Explore our app</a>
+            <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-stats reveal" data-reveal>
+            <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">Platforms · iOS &amp; Android</span></div>
+            <div class="stat"><span class="stat-num" data-count="3">0</span><span class="stat-label">Core service areas</span></div>
+            <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0</span><span class="stat-label">Cloud-native</span></div>
+        </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+</header>
+
+<main class="container">
+    <!-- About -->
+    <section class="section" id="about">
+        <span class="eyebrow reveal" data-reveal>Who we are</span>
+        <h2 class="section-title reveal" data-reveal>About SureGut</h2>
+        <p class="section-lead reveal" data-reveal>
+            SureGut LLC is a California-based software development firm specializing in
+            utility-driven mobile applications and data-centric software solutions. Our
+            mission is to transform complex data into actionable insights for users across
+            industries — from health-tech to financial services.
+        </p>
+    </section>
+
+    <!-- Featured product -->
+    <section class="section" id="product">
+        <span class="eyebrow reveal" data-reveal>Flagship app</span>
+        <h2 class="section-title reveal" data-reveal>Featured Product</h2>
+        <article class="product-card reveal" data-reveal>
+            <div class="product-glow" aria-hidden="true"></div>
             <span class="badge">Flagship App</span>
-            <h3>SureGut Mobile</h3>
-            <p>Our premier health-tech utility designed to help users manage dietary restrictions through AI-powered barcode scanning and ingredient analysis. Built with precision for those prioritizing renal and thyroid wellness.</p>
+            <h3 class="product-name">SureGut Mobile</h3>
+            <p class="product-desc">
+                A health-tech utility that helps users manage dietary restrictions through
+                AI-powered barcode scanning and ingredient analysis — built with precision
+                for those prioritizing renal and thyroid wellness.
+            </p>
+            <ul class="feature-list">
+                <li><span class="dot"></span>AI ingredient &amp; nutrition analysis</li>
+                <li><span class="dot"></span>Instant <em>Fits Profile</em> verdicts</li>
+                <li><span class="dot"></span>Personalized dietary profiles</li>
+            </ul>
             <div class="store-badges">
                 <a href="https://apps.apple.com/us/app/suregut/id6760095603" target="_blank" rel="noopener" aria-label="Download SureGut on the App Store">
-                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" loading="lazy">
                 </a>
                 <a href="https://play.google.com/store/apps/details?id=com.suregutinc.suregut" target="_blank" rel="noopener" aria-label="Get SureGut on Google Play">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" loading="lazy">
                 </a>
             </div>
-        </div>
-    </div>
-    <div class="section">
-        <h2>Services</h2>
-        <p>Beyond our consumer applications, SureGut LLC provides specialized consulting in:</p>
-        <ul>
-            <li>Software Quality Assurance & Test Automation</li>
-            <li>Cloud-Native Application Architecture</li>
-            <li>Mobile UI/UX Design & Implementation</li>
-        </ul>
-    </div>
-</div>
-<footer>
-    <div class="container">
-        <div class="contact-info">
-            <div>
-                <strong>Corporate Headquarters</strong><br>
-                SureGut LLC<br>
-                25876 The Old Rd<br>
-                PMB # 244<br>
-                Stevenson Ranch, CA 91381
-            </div>
-            <div>
-                <strong>Support & Inquiries</strong><br>
-                Email: <a href="mailto:support@suregut.com">support@suregut.com</a><br>
-                Website: <a href="https://suregut.com">www.suregut.com</a>
-            </div>
-        </div>
-        <p style="margin-top: 30px; border-top: 1px solid #cbd5e1; padding-top: 20px;">
-            <a href="terms">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a> | &copy; 2026 SureGut LLC. All Rights Reserved.
+            <p style="margin: 22px 0 0;"><a href="app.html">See how SureGut Mobile works &rarr;</a></p>
+        </article>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+        <span class="eyebrow reveal" data-reveal>What we do</span>
+        <h2 class="section-title reveal" data-reveal>Services</h2>
+        <p class="section-lead reveal" data-reveal>
+            Beyond our consumer applications, SureGut LLC provides specialized consulting in:
         </p>
+        <div class="service-grid">
+            <div class="service-card reveal" data-reveal>
+                <div class="service-icon">✓</div>
+                <h3>Quality Assurance &amp; Test Automation</h3>
+                <p>Robust testing strategies and automated pipelines that ship confidence, not just code.</p>
+            </div>
+            <div class="service-card reveal" data-reveal>
+                <div class="service-icon">☁</div>
+                <h3>Cloud-Native Architecture</h3>
+                <p>Scalable, serverless-first systems designed to grow seamlessly with your product.</p>
+            </div>
+            <div class="service-card reveal" data-reveal>
+                <div class="service-icon">◎</div>
+                <h3>Mobile UI/UX Design</h3>
+                <p>Polished, intuitive interfaces engineered for delightful real-world use.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contact">
+    <div class="container footer-inner">
+        <div class="footer-grid">
+            <div class="reveal" data-reveal>
+                <h4 class="footer-head">Corporate Headquarters</h4>
+                <address>
+                    SureGut LLC<br>
+                    25876 The Old Rd, PMB&nbsp;#244<br>
+                    Stevenson Ranch, CA 91381
+                </address>
+            </div>
+            <div class="reveal" data-reveal>
+                <h4 class="footer-head">Support &amp; Inquiries</h4>
+                <p>
+                    <a href="mailto:support@suregut.com">support@suregut.com</a><br>
+                    <a href="https://suregut.com">www.suregut.com</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bar">
+            <span>&copy; 2026 SureGut LLC. All Rights Reserved.</span>
+            <span class="footer-legal">
+                <a href="terms.html">Terms of Use</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </span>
+        </div>
     </div>
 </footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>
