@@ -495,6 +495,19 @@ footer p { color: var(--text-dim); margin: 0; }
     .scan-stage { margin-top: 12px; }
 }
 
+/* Supported profiles + FAQ (app page) */
+.support-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 32px; }
+.support-col { padding: 24px 26px; border-radius: var(--radius); background: var(--card); border: 1px solid var(--card-border); }
+.support-col h3 { font-size: 1.05rem; margin: 0 0 12px; color: var(--accent-2); }
+.support-col ul { list-style: none; padding: 0; margin: 0; }
+.support-col li { padding: 7px 0; border-bottom: 1px solid var(--card-border); color: var(--text); font-size: 0.94rem; }
+.support-col li:last-child { border-bottom: none; }
+
+.faq-list { margin-top: 30px; display: grid; gap: 10px; }
+.faq-item { padding: 20px 24px; border-radius: 14px; background: var(--card); border: 1px solid var(--card-border); }
+.faq-item h3 { font-size: 1.05rem; margin: 0 0 8px; color: var(--heading); }
+.faq-item p { margin: 0; color: var(--text-dim); font-size: 0.96rem; }
+
 /* ---------- Accessibility: respect reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
